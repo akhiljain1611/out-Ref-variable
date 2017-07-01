@@ -1,0 +1,25 @@
+class person
+    {
+        public void example(ref int n)
+        {
+            n=100;
+        }
+        public void example1(out int n)
+        {
+            n = 20;
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 10, b;
+            person p = new person();
+            p.example(ref a);
+            p.example1(out b);
+            Console.WriteLine("ref={0} out={1}",a,b);  //o/p ref=100,out=20
+            Console.ReadKey();
+                
+        }
+    }
